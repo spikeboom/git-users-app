@@ -17,7 +17,6 @@ const Principal = () => {
         const responseData = await sendRequest(
           'https://api.github.com/orgs/grupotesseract/public_members'
         );
-        console.log(responseData);
         setFilteredUsers(responseData);
         setLoadedUsers(responseData);
       } catch (err) {}

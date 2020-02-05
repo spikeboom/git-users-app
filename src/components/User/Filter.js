@@ -4,7 +4,6 @@ import './Filter.css';
 
 const Filter = props => {
   const [data, setData] = useState();
-  const inputRef = useRef();
   const { filter } = props;
 
   useEffect(() => {
@@ -18,8 +17,7 @@ const Filter = props => {
         type="text"
         placeholder={"Filtre os membros pelo login"}
         onChange={event => setData(event.target.value)}
-        value={data}
-        ref={inputRef}
+        value={data || ''}
         className="center"
       />
     </div>
