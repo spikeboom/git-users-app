@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import Avatar from '../UIElements/Avatar';
 import Card from '../UIElements/Card';
@@ -20,7 +20,6 @@ const UserItem = props => {
         const responseData = await sendRequest(
           `https://api.github.com/users/${props.login}`
         );
-        console.log(responseData);
         setLoadedDetails(responseData);
       } catch (err) { }
     }
@@ -42,7 +41,7 @@ const UserItem = props => {
       <ErrorModal error={error} onClear={clearError} />
       <li className="user-item">
         <Card className="user-item__content">
-          <a onClick={fetchUserDetails}>
+          <a onClick={fetchUserDetails} >
             <div className="user-item__image">
               <Avatar image={props.avatar_url} alt={props.login} />
             </div>

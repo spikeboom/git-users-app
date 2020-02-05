@@ -44,6 +44,11 @@
   color: #292929;
 }
 
+.user-item:hover p,
+.user-item:active p {
+  color: #616161;
+}
+
 .user-item__info h3 {
   margin: 0;
 }
